@@ -2,10 +2,10 @@
 #define PILELISTE_H
 
 #include <stdexcept>
-#include "PileExport.h" // 1. On inclut la macro d'exportation/importation
+#include "PileExport.h"
 
 template <class T>
-class PILE_API PileListe { // 2. On ajoute PILE_API ici
+class PILE_API PileListe {
 private:
     struct Cellule {
         T valeur;
@@ -13,14 +13,14 @@ private:
         Cellule(const T& v, Cellule* s) : valeur(v), suivant(s) {}
     };
 
-    Cellule* tete;   // pointeur vers le sommet de la pile
+    Cellule* tete;
     int nbElements;
 
 public:
     PileListe();
     ~PileListe();
-    PileListe(const PileListe<T>& autre);              // constructeur de copie
-    PileListe<T>& operator=(const PileListe<T>& autre); // affectation
+    PileListe(const PileListe<T>& autre);
+    PileListe<T>& operator=(const PileListe<T>& autre);
 
     void empiler(const T& valeur);
     T depiler();

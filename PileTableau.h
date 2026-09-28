@@ -3,10 +3,10 @@
 
 #include <iostream>
 #include <stdexcept>
-#include "PileExport.h" // 1. On inclut la macro
+#include "PileExport.h"
 
 template <class T>
-class PILE_API PileTableau { // 2. On ajoute PILE_API pour l'exportation
+class PILE_API PileTableau {
 private:
     T* tab;
     int capacite;

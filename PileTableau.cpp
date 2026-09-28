@@ -75,10 +75,6 @@ int PileTableau<T>::taille() const {
     return sommetIndex + 1;
 }
 
-// ========================================================
-// INSTANCIATION EXPLICITE POUR LA DLL
-// Sans ces lignes, la DLL sera vide car les templates
-// ne sont pas compilés tant qu'ils ne sont pas appelés.
-// ========================================================
-template class PILE_API PileTableau<char>; // Indispensable pour votre vérificateur d'expressions
-template class PILE_API PileTableau<int>;  // Pratique pour vos tests de performance
+
+template class PILE_API PileTableau<char>;
+template class PILE_API PileTableau<int>;
